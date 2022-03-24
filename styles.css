@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+.body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#sketchArea {
+    height: 80vh;
+    width: 80vh;
+    box-sizing: border-box;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
