@@ -1,4 +1,5 @@
 const sketchArea = document.getElementById("sketchArea")
+const reset = document.getElementById("reset")
 
 function createSketchArea(width) {
     sketchArea.innerHTML = "";
@@ -7,6 +8,14 @@ function createSketchArea(width) {
         divs.classList.add("square");
         divs.style.width = 100/width + "%";
         divs.style.height = 100/width + "%";
+        divs.addEventListener("mouseover", function(){
+            divs.style.backgroundColor = "black";   
+        })
         sketchArea.appendChild(divs);
     }
 }
+
+reset.addEventListener("click", function(){
+    let numberOfSquares = prompt("Enter a number between 1 and 64");
+    createSketchArea(numberOfSquares);
+});
