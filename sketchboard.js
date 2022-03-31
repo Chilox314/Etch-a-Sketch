@@ -8,8 +8,8 @@ function createSketchArea(width) {
         divs.classList.add("square");
         divs.style.width = 100/width + "%";
         divs.style.height = 100/width + "%";
-        divs.addEventListener("mouseover", function(){
-            divs.style.backgroundColor = "black";   
+        divs.addEventListener("mousedown", function(){ //search for a way to make a click and hover event
+            divs.style.backgroundColor = "black";
         })
         sketchArea.appendChild(divs);
     }
