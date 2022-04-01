@@ -14,12 +14,12 @@ html, body {
     height: 80vh;
     width: 80vh;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 0.3px solid black;
     display: flex;
     flex-wrap: wrap;
 }
 
 .square {
-    border: 1px solid black;
+    border: 0.3px solid black;
     box-sizing: border-box;
 }
