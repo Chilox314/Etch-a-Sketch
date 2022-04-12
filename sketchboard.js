@@ -1,5 +1,15 @@
+//To Do: Rainbow-Mode, UI, Design
+let mouseDown = false
 const sketchArea = document.getElementById("sketchArea")
 const reset = document.getElementById("reset")
+let color = "#000000"
+
+//The colorpicker
+const colorPicker = document.getElementById("colorpicker")
+colorPicker.onchange = (e) => updateColor(e.target.value);
+function updateColor(value) {
+    color = value;
+}
 
 //changing the grid size by using slider & display current size
 const sizeValue = document.getElementById("sizeValue")
@@ -20,15 +30,29 @@ function createSketchArea(width) {
         divs.classList.add("square");
         divs.style.width = 100/width + "%";
         divs.style.height = 100/width + "%";
-        divs.addEventListener("mouseover", function(){ //search for a way to make a click and hover event
-            divs.style.backgroundColor = "black";
-        })
+        divs.addEventListener("mouseover", function(){
+            if (mouseDown) {
+                divs.style.backgroundColor = color;
+            };
+        });
+        divs.addEventListener("mousedown", function(){
+            divs.style.backgroundColor = color;
+        });
         sketchArea.appendChild(divs);
     }
 }
+
 //reset the Area
 reset.addEventListener("click", function(){
     createSketchArea(gridSlider.value)
 });
 
 createSketchArea(8);
+
+//only draw if mouse is clicked
+sketchArea.addEventListener("mousedown", function(){
+    mouseDown = true;
+})
+sketchArea.addEventListener("mouseup", function(){
+    mouseDown = false;
+} )
