@@ -1,15 +1,30 @@
-//To Do: Rainbow-Mode, UI, Design
 let mouseDown = false
 const sketchArea = document.getElementById("sketchArea")
 const reset = document.getElementById("reset")
 let color = "#000000"
 
-//The colorpicker
+//the colorpicker
 const colorPicker = document.getElementById("colorpicker")
 colorPicker.onchange = (e) => updateColor(e.target.value);
 function updateColor(value) {
     color = value;
 }
+
+//the rainbowmode
+function randomColor() {
+    let options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "a", "b", "c", "d", "e", "f"];
+    let randomColorResult = "#";
+    for (let i = 0; i < 6; i++) {
+        randomColorResult += options[Math.floor(Math.random() * 16)]
+    };
+    return randomColorResult;
+};
+let rainbowmode = false;
+const rainbowmodeBtn = document.getElementById("rainbowmode");
+rainbowmodeBtn.addEventListener("click", function() {
+    rainbowmode = rainbowmodeBtn.checked;
+});
+
 
 //changing the grid size by using slider & display current size
 const sizeValue = document.getElementById("sizeValue")
@@ -32,11 +47,21 @@ function createSketchArea(width) {
         divs.style.height = 100/width + "%";
         divs.addEventListener("mouseover", function(){
             if (mouseDown) {
+                if (rainbowmode) {
+                    divs.style.backgroundColor = randomColor();
+                }
+                else {
                 divs.style.backgroundColor = color;
+                };
             };
         });
         divs.addEventListener("mousedown", function(){
+            if (rainbowmode) {
+                divs.style.backgroundColor = randomColor();
+            }
+            else {
             divs.style.backgroundColor = color;
+            };
         });
         sketchArea.appendChild(divs);
     }
