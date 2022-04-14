@@ -1,25 +1,77 @@
-html, body {
+html, body, .all {
     height: 100%;
     margin: 0px;
 }
 
-.body {
-    height: 100vh;
+.all {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
+.body {
+    height: 90vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ff6961;
+    border: 0px;
+    border-radius: 50px;
+}
+
+.content {
+    display: flex;
+    width: 80vw;
+    justify-content: space-evenly;
+}
+
 #sketchArea {
-    height: 80vh;
-    width: 80vh;
+    height: 70vh;
+    width: 70vh;
     box-sizing: border-box;
     border: 0.1px solid black;
     display: flex;
     flex-wrap: wrap;
+    background-color:rgb(231, 187, 187);
 }
 
 .square {
     border: 0.3px solid black;
     box-sizing: border-box;
+}
+
+.selection {
+    background-color: rgb(231, 187, 187);
+    display: flex;
+    flex-direction: column;
+    border: 0px;
+    border-radius: 25px;
+    width: 200px;
+    height: fit-content;
+    padding: 20px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.colorpicker {
+    display: flex;
+    align-items: center;
+}
+
+#colorpicker {
+    border: none;
+    display: block;
+    opacity: 0;
+    height: 25px;
+    width: 25px;
+}
+
+#color-picker-wrapper {
+    float: right;
+    border-radius: 50px;
+    margin-left: 5px;
 }

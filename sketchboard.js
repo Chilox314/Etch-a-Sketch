@@ -5,9 +5,11 @@ let color = "#000000"
 
 //the colorpicker
 const colorPicker = document.getElementById("colorpicker")
+const colorPickerWrapper = document.getElementById("color-picker-wrapper");
 colorPicker.onchange = (e) => updateColor(e.target.value);
 function updateColor(value) {
     color = value;
+    colorPickerWrapper.style.backgroundColor = value;
 }
 
 //the rainbowmode

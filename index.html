@@ -5,17 +5,30 @@
         <link href="styles.css" rel="stylesheet">
     </head>
     <body>
-        <div class="body">
-            <div class="selection">
-                <input type="checkbox" id="rainbowmode">Rainbowmode
-                <input type="color" id="colorpicker" value="#000000">
-                <button id="reset">Reset</button>
-                <div class="gridInput">
-                    <div id="sizeValue">8 x 8</div>
-                    <input type="range" min="1" max="64" value="8" class="slider" id="gridslider">
+        <div class="all">
+            <div class="body">
+                <h1>Etch A Sketch</h1>
+                <div class="content">
+                    <div class="selection">
+                        <p class="bold">Settings:</p>
+                        <div class="colorpicker">
+                            Choose a color:
+                            <div id="color-picker-wrapper">
+                                <input type="color" id="colorpicker" value="#000000">
+                            </div>
+                        </div>
+                        <div class="rainbow">
+                            <input type="checkbox" id="rainbowmode">Rainbowmode
+                        </div>
+                        <div class="gridInput">
+                            <div id="sizeValue">8 x 8</div>
+                            <input type="range" min="1" max="64" value="8" class="slider" id="gridslider">
+                        </div>
+                        <button id="reset">Reset</button>
+                    </div>
+                    <div id="sketchArea">
+                    </div>
                 </div>
-            </div>
-            <div id="sketchArea">
             </div>
         </div>
         <script src="sketchboard.js"></script>
