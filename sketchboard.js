@@ -36,7 +36,7 @@ gridSlider.onmousemove = (e) => updateSizeValue(e.target.value)
 gridSlider.onchange = (e) => createSketchArea(e.target.value)
 
 function updateSizeValue(value) {
-    sizeValue.innerHTML = `${value} x ${value}`
+    sizeValue.innerHTML = `Size: ${value} x ${value}`
 }
 
 //create the Area

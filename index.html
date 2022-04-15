@@ -3,6 +3,9 @@
     <head>
         <title>Etch-a-Sketch!</title>
         <link href="styles.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+        </style>
     </head>
     <body>
         <div class="all">
@@ -12,16 +15,17 @@
                     <div class="selection">
                         <p class="bold">Settings:</p>
                         <div class="colorpicker">
-                            Choose a color:
+                            Pick a color:
                             <div id="color-picker-wrapper">
                                 <input type="color" id="colorpicker" value="#000000">
                             </div>
                         </div>
                         <div class="rainbow">
-                            <input type="checkbox" id="rainbowmode">Rainbowmode
+                            Rainbowmode:
+                            <input type="checkbox" id="rainbowmode">
                         </div>
                         <div class="gridInput">
-                            <div id="sizeValue">8 x 8</div>
+                            <div id="sizeValue">Size: 8 x 8</div>
                             <input type="range" min="1" max="64" value="8" class="slider" id="gridslider">
                         </div>
                         <button id="reset">Reset</button>

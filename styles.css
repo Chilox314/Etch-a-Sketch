@@ -14,7 +14,7 @@ html, body, .all {
     width: 80vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content:flex-start;
     align-items: center;
     background-color: #ff6961;
     border: 0px;
@@ -34,7 +34,7 @@ html, body, .all {
     border: 0.1px solid black;
     display: flex;
     flex-wrap: wrap;
-    background-color:rgb(231, 187, 187);
+    background-color:rgb(233, 220, 220);
 }
 
 .square {
@@ -43,9 +43,13 @@ html, body, .all {
 }
 
 .selection {
+    font-family: 'Alex Brush', cursive;
+    font-size: 30px;
+    font-weight: 400;
     background-color: rgb(231, 187, 187);
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: 0px;
     border-radius: 25px;
     width: 200px;
@@ -55,6 +59,7 @@ html, body, .all {
 
 .bold {
     font-weight: 600;
+    margin: 15px 0px;
 }
 
 .colorpicker {
@@ -66,12 +71,41 @@ html, body, .all {
     border: none;
     display: block;
     opacity: 0;
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
+
 }
 
 #color-picker-wrapper {
     float: right;
     border-radius: 50px;
-    margin-left: 5px;
+    margin-left: 15px;
+    background-color: #000000;
+    border: solid rgb(36, 21, 21) 2px;
+}
+
+h1 {
+    font-family: 'Alex Brush', cursive;
+    font-size: 10vh;
+    margin: 20px 0px 0px 0px;
+}
+
+.gridInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sizeValue {
+    font-size: 25px;
+}
+
+#reset {
+    background-color: #ff6961;
+    border: solid rgb(36, 21, 21) 2px;
+    border-radius: 10px;
+    padding: 3px 16px;
+    font-family:  'Alex Brush', cursive;
+    font-size: 30px;
+    margin-top: 10px;
 }
